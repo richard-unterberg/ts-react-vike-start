@@ -1,0 +1,37 @@
+{
+  "name": "my-app",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "prettier": "^3.1.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-react-app": "^7.0.1",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.32",
+    "autoprefixer": "^10.4.16"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "cross-fetch": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vike": "^0.4.152",
+    "vike-react": "^0.3.8"
+  }
+}
