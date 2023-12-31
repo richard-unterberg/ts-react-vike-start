@@ -6,7 +6,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   base: '/ts-react-vike-start/', // remove for using root
-  plugins: [react({}), ssr({})],
+  plugins: [react({}), ssr({ prerender: true })],
   server: {
     port: 5247,
   },
