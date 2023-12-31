@@ -15,7 +15,17 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "types": ["vite/client", "vike-react"],
     "jsx": "preserve",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      "#utils/*": ["./lib/utils/*"],
+      "#hooks/*": ["./lib/hooks/*"],
+      "#types/*": ["./lib/types/*"],
+      "#lib/*": ["./lib/*"],
+      "#layouts/*": ["./layouts/*"],
+      "#components/*": ["./components/*"],
+      "#root/*": ["./*"],
+    }
   },
-  "exclude": ["dist"]
+  "exclude": ["dist", "vite.config.js", "tailwind.config.ts", "node_modules"]
 }
