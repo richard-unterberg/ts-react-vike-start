@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function Page({ is404, errorInfo }: { is404: boolean; errorInfo?: string }) {
+const Page = ({ is404, errorInfo }: { is404: boolean; errorInfo?: string }) => {
   if (is404) {
     return (
       <>
@@ -8,13 +6,14 @@ export default function Page({ is404, errorInfo }: { is404: boolean; errorInfo?:
         <p>This page could not be found.</p>
         <p>{errorInfo}</p>
       </>
-    );
-  } else {
-    return (
-      <>
-        <h1>500 Internal Server Error</h1>
-        <p>Something went wrong.</p>
-      </>
-    );
+    )
   }
+  return (
+    <>
+      <h1>500 Internal Server Error</h1>
+      <p>Something went wrong.</p>
+    </>
+  )
 }
+
+export default Page
