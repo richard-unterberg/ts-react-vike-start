@@ -5,12 +5,16 @@ import ssr from 'vike/plugin'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  base: '/ts-react-vike-start/', // remove for using root
   plugins: [react({}), ssr({})],
   server: {
     port: 5247,
   },
   preview: {
     port: 4248,
+  },
+  ssr: {
+    noExternal: ['tailwind-styled-components'],
   },
   resolve: {
     alias: {

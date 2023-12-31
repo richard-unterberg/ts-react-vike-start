@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "ts-react-vike-start",
   "version": "0.0.1",
   "description": "",
   "type": "module",
@@ -48,6 +48,8 @@
     "vike": "^0.4.152",
     "vike-react": "^0.3.8",
     "tailwindcss": "^3.4.0",
-    "@fontsource/inter": "^5.0.16"
+    "@fontsource/inter": "^5.0.16",
+    "styled-components": "^6.1.1",
+    "tailwind-styled-components": "^2.2.0"
   }
 }
