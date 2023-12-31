@@ -23,9 +23,10 @@
       "#types/*": ["./lib/types/*"],
       "#lib/*": ["./lib/*"],
       "#layouts/*": ["./layouts/*"],
+      "#renderer/*": ["./renderer/*"],
       "#components/*": ["./components/*"],
       "#root/*": ["./*"],
     }
   },
-  "exclude": ["dist", "vite.config.js", "tailwind.config.ts", "node_modules"]
+  "exclude": ["dist", "*.js", "node_modules"]
 }

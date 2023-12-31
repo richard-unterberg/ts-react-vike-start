@@ -42,7 +42,7 @@ export default {
       const extractColorVars = (colorObj: Record<string, string>, colorGroup = '') =>
         Object.entries(colorObj).reduce((vars, [colorKey, value]) => {
           const cssVariable =
-            colorKey === 'DEFAULT' ? `--color${colorGroup}` : `--color${colorGroup}-${colorKey}`
+            colorKey === 'DEFAULT' ? `--tw${colorGroup}` : `--tw${colorGroup}-${colorKey}`
 
           const newVars: Record<string, string> =
             typeof value === 'string'
