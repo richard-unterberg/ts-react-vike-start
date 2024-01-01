@@ -1,10 +1,10 @@
 export const mainNavigation = [
   {
-    label: 'Startpage',
+    label: 'Get Started',
     href: '/',
   },
   {
-    label: 'Testpage',
-    href: '/test',
+    label: 'Preconditions & Features',
+    href: '/features',
   },
 ]

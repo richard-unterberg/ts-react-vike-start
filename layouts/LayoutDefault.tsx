@@ -4,6 +4,7 @@ import '#layouts/styles.css'
 
 import { ReactNode } from 'react'
 
+import Footer from '#layouts/Footer'
 import Topbar from '#layouts/Topbar'
 
 const LayoutDefault = ({ children }: { children: ReactNode }) => (
@@ -11,6 +12,7 @@ const LayoutDefault = ({ children }: { children: ReactNode }) => (
     <div className="relative container px-5 mx-auto text-white text-base">
       <Topbar />
       <div>{children}</div>
+      <Footer />
     </div>
   </div>
 )

@@ -14,7 +14,7 @@ const Nav = () => (
     <ul className="flex gap-3 relative">
       {mainNavigation.map(item => (
         <li key={item.href} className="block">
-          <Link className="bg-darkLight rounded" href={item.href} button>
+          <Link className="rounded" href={item.href} button>
             {item.label}
           </Link>
         </li>

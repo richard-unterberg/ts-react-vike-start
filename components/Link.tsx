@@ -25,9 +25,7 @@ const Link = ({ href, external, children, className = '', button }: LinkProps) =
 
     if (button) {
       return `${
-        isActive
-          ? 'bg-primary pointer-events-none'
-          : 'bg-darkLight hover:bg-primary hover:bg-opacity-75'
+        isActive ? 'bg-primary pointer-events-none' : 'bg-primary bg-opacity-50 hover:bg-opacity-75'
       } p-3 ${className} ${staticClassName} `
     }
 
