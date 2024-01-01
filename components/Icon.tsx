@@ -9,7 +9,7 @@ interface AppIconProps extends LucideProps {
 }
 
 const Icon = ({ icon, ...props }: AppIconProps) => {
-  const [Component, setComponent] = useState<React.ComponentType<LazyIconIconProps>>(() => <>l</>)
+  const [Component, setComponent] = useState<React.ComponentType<LazyIconIconProps>>(() => '')
 
   useEffect(() => {
     setComponent(() => lazy(() => import('#lib/icons/IconLazyRenderer')))
