@@ -1,14 +1,18 @@
 import { LucideProps } from 'lucide-react'
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 
 import { ICON_ID } from '#lib/icons/iconID'
 import APP_ICON from '#lib/icons/iconMap'
 
-interface LazyIconIconProps extends LucideProps {
+export interface LazyIconIconProps extends LucideProps {
   icon: ICON_ID
 }
 
 const IconLazyRenderer = ({ icon, ...props }: LazyIconIconProps) => {
+  if (typeof window === 'undefined') {
+    throw Error('nö')
+  }
+
   const AppIconComponent = useMemo(() => APP_ICON[icon].component ?? null, [icon])
 
   if (AppIconComponent) {

@@ -5,12 +5,12 @@ import '#layouts/styles.css'
 import { ReactNode } from 'react'
 
 import Footer from '#layouts/Footer'
-import Topbar from '#layouts/Topbar'
+import Header from '#layouts/Header'
 
 const LayoutDefault = ({ children }: { children: ReactNode }) => (
   <div className="max-w-4xl m-auto text-light">
     <div className="relative container px-5 mx-auto text-white text-base">
-      <Topbar />
+      <Header />
       <div>{children}</div>
       <Footer />
     </div>

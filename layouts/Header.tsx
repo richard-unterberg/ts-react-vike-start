@@ -5,7 +5,7 @@ import Popover from '#components/Popover'
 import useAppTheme from '#hooks/useTheme'
 import { ICON_ID } from '#lib/icons/iconID'
 
-const Topbar = () => {
+const Header = () => {
   const { spacing } = useAppTheme()
 
   return (
@@ -44,4 +44,4 @@ const Topbar = () => {
   )
 }
 
-export default Topbar
+export default Header

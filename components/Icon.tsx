@@ -6,13 +6,12 @@ import { ICON_ID } from '#lib/icons/iconID'
 interface AppIconProps extends LucideProps {
   icon: ICON_ID
 }
-
 const IconLazyRenderer = lazy(() => import('#lib/icons/IconLazyRenderer'))
 
 const Icon = ({ icon, ...props }: AppIconProps) => {
   if (icon) {
     return (
-      <Suspense>
+      <Suspense fallback="">
         <IconLazyRenderer icon={icon} {...props} />
       </Suspense>
     )
