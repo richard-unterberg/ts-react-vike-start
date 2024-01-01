@@ -8,8 +8,6 @@ interface AppIconProps extends LucideProps {
   icon: ICON_ID
 }
 
-const IconFallback = ({ className }: { className: string }) => <div className={className} />
-
 const Icon = ({ icon, ...props }: AppIconProps) => {
   const [Component, setComponent] = useState<React.ComponentType<LazyIconIconProps>>(() => '')
 
@@ -19,10 +17,8 @@ const Icon = ({ icon, ...props }: AppIconProps) => {
 
   if (icon) {
     return (
-      <div className={props?.className || ''} style={{ width: props.size, height: props.size }}>
-        <Suspense fallback={<IconFallback className={props?.className || ''} />}>
-          {Component && <Component icon={icon} {...props} />}
-        </Suspense>
+      <div className={props.className || ''} style={{ width: props.size, height: props.size }}>
+        <Suspense fallback="">{Component && <Component icon={icon} {...props} />}</Suspense>
       </div>
     )
   }
