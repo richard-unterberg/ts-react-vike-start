@@ -1,20 +1,23 @@
-import ReactDOMServer from 'react-dom/server'
-import { dangerouslySkipEscape, escapeInject } from 'vike/server'
+import { renderToStream } from 'react-streaming/server'
+import { escapeInject } from 'vike/server'
 import type { InjectFilterEntry, OnRenderHtmlAsync } from 'vike/types'
 
+import LayoutDefault from '#layouts/LayoutDefault'
 import logoUrl from '#root/assets/logo.svg'
-import PageShell from '#root/renderer/PageShell'
 import { getDescription, getTitle } from '#utils/index'
 
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
   const { Page, pageProps } = pageContext
+  // todo: why is this untyped?
+  const { userAgent } = pageContext as never
   // This onRenderHtml() hook only supports SSR, see https://vike.dev/render-modes for how to modify
   // onRenderHtml() to support SPA
   if (!Page) throw new Error('My render() hook expects pageContext.Page to be defined')
-  const pageHtml = ReactDOMServer.renderToString(
-    <PageShell pageContext={pageContext}>
+  const stream = await renderToStream(
+    <LayoutDefault pageContext={pageContext}>
       <Page {...pageProps} />
-    </PageShell>,
+    </LayoutDefault>,
+    { userAgent },
   )
 
   const title = getTitle(pageContext)
@@ -30,7 +33,7 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
         <title>${title}</title>
       </head>
       <body>
-        <div id="react-root">${dangerouslySkipEscape(pageHtml)}</div>
+        <div id="react-root">${stream}</div>
       </body>
     </html>`
 

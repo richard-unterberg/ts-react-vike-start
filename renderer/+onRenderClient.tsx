@@ -1,9 +1,8 @@
 import { createRoot, hydrateRoot, Root } from 'react-dom/client'
 import type { OnRenderClientAsync } from 'vike/types'
 
+import LayoutDefault from '#layouts/LayoutDefault'
 import { getTitle } from '#utils/index'
-
-import PageShell from './PageShell'
 
 // This onRenderClient() hook only supports SSR, see https://vike.dev/render-modes for how to modify onRenderClient()
 // to support SPA
@@ -21,9 +20,9 @@ const onRenderClient: OnRenderClientAsync = async (
   }
 
   const page = (
-    <PageShell pageContext={pageContext}>
+    <LayoutDefault pageContext={pageContext}>
       <Page {...pageProps} />
-    </PageShell>
+    </LayoutDefault>
   )
 
   if (pageContext.isHydration) {

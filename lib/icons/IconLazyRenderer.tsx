@@ -9,8 +9,8 @@ export interface LazyIconIconProps extends LucideProps {
 }
 
 const IconLazyRenderer = ({ icon, ...props }: LazyIconIconProps) => {
-  if (typeof window === 'undefined') {
-    throw Error('nö')
+  if (typeof window === undefined) {
+    throw new Error('IconLazyRenderer must be used in browser')
   }
 
   const AppIconComponent = useMemo(() => APP_ICON[icon].component ?? null, [icon])
