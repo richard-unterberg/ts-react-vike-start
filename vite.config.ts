@@ -7,6 +7,9 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   base: '/ts-react-vike-start/', // remove for using root
   plugins: [react({}), ssr({ prerender: true })],
+  optimizeDeps: {
+    include: ['cross-fetch', 'react/jsx-runtime', 'vike-react/renderer/onRenderClient'],
+  },
   server: {
     port: 5247,
   },

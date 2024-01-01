@@ -1,11 +1,23 @@
-import { usePageContext } from '#renderer/usePageContext'
+import { usePageContext } from '#root/renderer/usePageContext'
 
-const Link = ({ href, children }: { href: string; children: string }) => {
+interface LinkProps {
+  href: string
+  external?: boolean
+  children: React.ReactNode | React.ReactNode[]
+  className?: string
+}
+
+const Link = ({ href, external, children, className = '' }: LinkProps) => {
   const pageContext = usePageContext()
   const { urlPathname } = pageContext
   const isActive = href === '/' ? urlPathname === href : urlPathname.startsWith(href)
   return (
-    <a href={href} className={isActive ? 'is-active' : undefined}>
+    <a
+      href={href}
+      className={isActive ? `is-active ${className}` : `${className}`}
+      target={external ? '_blank' : '_self'}
+      rel={external ? 'noreferrer' : ''}
+    >
       {children}
     </a>
   )

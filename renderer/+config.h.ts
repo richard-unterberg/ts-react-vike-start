@@ -8,4 +8,23 @@ export default {
 
   // See https://vike.dev/data-fetching
   passToClient: ['documentProps', 'pageProps', 'urlPathname'],
+  clientRouting: true,
+  hydrationCanBeAborted: true,
+  meta: {
+    Head: {
+      env: { server: true },
+    },
+    Layout: {
+      env: { server: true, client: true },
+    },
+    title: {
+      env: { server: true, client: true },
+    },
+    ssr: {
+      env: { config: true },
+    },
+    Page: {
+      env: { server: true, client: true },
+    },
+  },
 } satisfies Config

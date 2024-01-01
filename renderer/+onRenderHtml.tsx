@@ -2,10 +2,9 @@ import ReactDOMServer from 'react-dom/server'
 import { dangerouslySkipEscape, escapeInject } from 'vike/server'
 import type { InjectFilterEntry, OnRenderHtmlAsync } from 'vike/types'
 
+import PageShell from '#renderer/PageShell'
 import logoUrl from '#root/assets/logo.svg'
 import { getDescription, getTitle } from '#utils/index'
-
-import PageShell from './PageShell'
 
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
   const { Page, pageProps } = pageContext
@@ -46,22 +45,12 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
         return
       }
 
-      // Preload images
-      if (asset.assetType === 'image') {
-        asset.inject = 'HTML_BEGIN'
-      }
-
       // Don't preload fonts with woff extension
       if (asset.assetType === 'font') {
         const src = asset.src.toString()
         if (src.endsWith('.woff')) {
           asset.inject = false
         }
-      }
-
-      // Preload videos
-      if (asset.mediaType?.startsWith('video')) {
-        asset.inject = 'HTML_END'
       }
     })
   }
@@ -70,7 +59,7 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
     documentHtml,
     pageContext: {},
     injectFilter,
-    // to get injectFilter accepted cast this any badly here :`(
+    // to get injectFilter accepted cast this 'any' here sooooo badly  :`(
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } as any
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import type { PageContext } from 'vike/types'
 
 import LayoutDefault from '#layouts/LayoutDefault'
-import { PageContextProvider } from '#renderer/usePageContext'
+import { PageContextProvider } from '#root/renderer/usePageContext'
 
 const PageShell = ({
   children,
