@@ -17,9 +17,12 @@ const Icon = ({ icon, ...props }: AppIconProps) => {
 
   if (icon) {
     return (
-      <div className={props.className || ''} style={{ width: props.size, height: props.size }}>
+      <span
+        className={`block ${props.className || ''}`}
+        style={{ width: props.size, height: props.size }}
+      >
         <Suspense fallback="">{Component && <Component icon={icon} {...props} />}</Suspense>
-      </div>
+      </span>
     )
   }
   return null
