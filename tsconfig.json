@@ -23,7 +23,7 @@
       "#types/*": ["./lib/types/*"],
       "#lib/*": ["./lib/*"],
       "#layouts/*": ["./layouts/*"],
-      "#renderer/*": ["./renderer/*"],
+      "#renderer/*": ["renderer/*"],
       "#components/*": ["./components/*"],
       "#root/*": ["./*"],
     }

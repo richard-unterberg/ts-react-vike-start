@@ -1,14 +1,26 @@
+import BoxElement from '#components/BoxElement'
+import Icon from '#components/Icon'
 import Link from '#components/Link'
+import { ICON_ID } from '#lib/icons/iconID'
+import { mainNavigation } from '#lib/navigation'
 
 const Nav = () => (
-  <ul>
-    <li>
-      <Link href="testpage">Test?</Link>
-    </li>
-    <li>
-      <Link href="/">Startpage</Link>
-    </li>
-  </ul>
+  <BoxElement className="bg-opacity-25 p-8 mb-10 relative overflow-hidden justify-between flex items-center">
+    <Icon
+      icon={ICON_ID.Orbit}
+      className="text-darkLight absolute h-40 w-40 left-1/2 -ml-20 top-5"
+    />
+    <p className=" text-light relative">Test the client-side navigation {`=>`}</p>
+    <ul className="flex gap-3 relative">
+      {mainNavigation.map(item => (
+        <li key={item.href} className="block">
+          <Link className="bg-darkLight rounded" href={item.href} button>
+            {item.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </BoxElement>
 )
 
 export default Nav

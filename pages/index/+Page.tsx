@@ -3,7 +3,6 @@ import { BoxHeadline } from '#components/BoxHeadline'
 import CodeElement from '#components/CodeElement'
 import Icon from '#components/Icon'
 import Link from '#components/Link'
-import Popover from '#components/Popover'
 import useAppTheme from '#hooks/useTheme'
 import { ICON_ID } from '#lib/icons/iconID'
 
@@ -26,39 +25,9 @@ const LinkElement = ({ children, href }: { children: React.ReactNode; href: stri
 }
 
 const StartPage = () => {
-  const { color, spacing } = useAppTheme()
+  const { color } = useAppTheme()
   return (
-    <div className="relative container px-5 mx-auto text-white text-base max-w-4xl">
-      <Popover>
-        <Link
-          aria-label="to-github"
-          href="https://github.com/richard-unterberg/ts-react-vike-start"
-          external
-        >
-          <Icon icon={ICON_ID.Github} size={spacing(10)} />
-        </Link>
-      </Popover>
-
-      <div className="xs:block md:flex gap-3 mt-16 my-10 items-center">
-        <Icon
-          icon={ICON_ID.MagnetIcon}
-          color={color('warning')}
-          className="mx-auto mb-4 md:mx-0 "
-          size={spacing(24)}
-        />
-        <div className="text-center md:text-left">
-          <p className="mb-5 font-mono">ts-react-vike-start</p>
-          <h1 className="text-3xl mb-2 font-bold" id="typescript--react--vite">
-            TypeScript + React + Vike
-          </h1>
-          <h2 className="font-normal mb-6" id="feat-tailwind-css--eslint--prettier">
-            Tailwind CSS + ESLint + Prettier
-          </h2>
-        </div>
-      </div>
-      <p className="mb-10">
-        An SSR-ready vite-react starter with vike and my usual friends tailwind and lucide-icons 😙.
-      </p>
+    <>
       <p className="font-bold mb-4">Preconditions:</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
         <BoxElement>npm or yarn</BoxElement>
@@ -180,7 +149,7 @@ const StartPage = () => {
           ⭐️ https://github.com/richard-unterberg/vike-starter
         </LinkElement>
       </div>
-    </div>
+    </>
   )
 }
 

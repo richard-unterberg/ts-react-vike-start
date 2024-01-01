@@ -2,14 +2,16 @@ import '@fontsource/inter/latin-400.css'
 import '@fontsource/inter/latin-700.css'
 import '#layouts/styles.css'
 
-import React from 'react'
+import { ReactNode } from 'react'
 
-import Nav from '#components/Nav'
+import Topbar from '#layouts/Topbar'
 
-const LayoutDefault = ({ children }: { children: React.ReactNode }) => (
-  <div className="max-w-5xl m-auto text-light">
-    <Nav />
-    <div>{children}</div>
+const LayoutDefault = ({ children }: { children: ReactNode }) => (
+  <div className="max-w-4xl m-auto text-light">
+    <div className="relative container px-5 mx-auto text-white text-base">
+      <Topbar />
+      <div>{children}</div>
+    </div>
   </div>
 )
 

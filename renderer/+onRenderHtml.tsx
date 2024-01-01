@@ -2,8 +2,8 @@ import ReactDOMServer from 'react-dom/server'
 import { dangerouslySkipEscape, escapeInject } from 'vike/server'
 import type { InjectFilterEntry, OnRenderHtmlAsync } from 'vike/types'
 
-import PageShell from '#renderer/PageShell'
 import logoUrl from '#root/assets/logo.svg'
+import PageShell from '#root/renderer/PageShell'
 import { getDescription, getTitle } from '#utils/index'
 
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {

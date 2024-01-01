@@ -7,4 +7,5 @@ export enum ICON_ID {
   PackageCheck,
   PencilRuler,
   Sailboat,
+  Orbit,
 }

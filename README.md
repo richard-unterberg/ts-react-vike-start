@@ -1,4 +1,4 @@
-# TypeScript + React + Vite
+# TypeScript + React + Vike
 ## feat. Tailwind CSS + ESLint + Prettier)
 
 Featuresome template to provides a additional setup to get TS-React working in Vite with HMR and handful of strict ESLint rules, I want to add to work with properly in my side projects.
@@ -9,6 +9,8 @@ Features:
 - Fontsource integration
 - Custom Theme Hook
 - Lucide Icon Library
+- ES6 Path Aliases (#components, #renderer)
+- custom renderer
 - Full Dev Setup
   - ESLint
   - Prettier + Prettier Sort Imports

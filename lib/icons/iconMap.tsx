@@ -9,6 +9,7 @@ import {
   LucideProps,
   MagnetIcon,
   MonitorDown,
+  Orbit,
   PackageCheck,
   PencilRuler,
   Sailboat,
@@ -32,6 +33,7 @@ const APP_ICON: ICON_TYPE = {
   [ICON_ID.PackageCheck]: { component: PackageCheck },
   [ICON_ID.PencilRuler]: { component: PencilRuler },
   [ICON_ID.Sailboat]: { component: Sailboat },
+  [ICON_ID.Orbit]: { component: Orbit },
 }
 
 export default APP_ICON

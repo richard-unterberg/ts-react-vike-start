@@ -1,12 +1,14 @@
 import path from 'path'
 import react from '@vitejs/plugin-react'
-import ssr from 'vike/plugin'
+import vike from 'vike/plugin'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { defineConfig } from 'vite'
 
+import { AppConfig } from './lib/constants'
+
 export default defineConfig({
-  base: '/ts-react-vike-start/', // remove for using root
-  plugins: [react({}), ssr({ prerender: true })],
+  base: AppConfig.viteBaseUrl, // remove for using root
+  plugins: [react(), vike({ prerender: true })],
   optimizeDeps: {
     include: ['cross-fetch', 'react/jsx-runtime', 'vike-react/renderer/onRenderClient'],
   },

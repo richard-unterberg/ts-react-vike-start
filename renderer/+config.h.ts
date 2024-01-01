@@ -7,7 +7,7 @@ export default {
   // !! WARNING !! Before doing so, read https://vike.dev/clientRouting */
 
   // See https://vike.dev/data-fetching
-  passToClient: ['documentProps', 'pageProps', 'urlPathname'],
+  passToClient: ['documentProps', 'pageProps'],
   clientRouting: true,
   hydrationCanBeAborted: true,
   meta: {
