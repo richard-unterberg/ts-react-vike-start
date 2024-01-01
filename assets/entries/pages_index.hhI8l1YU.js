@@ -1,4 +1,4 @@
-import{F as s,u as l,j as e,B as r,I as i,a as o,i as d,b as c,c as p}from"../chunks/chunk-Cd_CTTWz.js";import"../chunks/chunk-psyNbo1_.js";const n=s.h3`
+import{F as s,u as l,j as e,B as r,I as i,a as o,i as d,b as c,c as p}from"../chunks/chunk-Speqy5vd.js";import"../chunks/chunk-psyNbo1_.js";const n=s.h3`
   flex
   gap-2
   justify-between
