@@ -20,7 +20,7 @@ const Topbar = () => {
         </Link>
       </Popover>
 
-      <div className="xs:block md:flex gap-3 mt-16 my-10 items-center">
+      <div className="xs:block md:flex gap-6 mt-16 my-10 items-center">
         <Icon
           icon={ICON_ID.MagnetIcon}
           className="mx-auto mb-4 md:mx-0 text-warning"
