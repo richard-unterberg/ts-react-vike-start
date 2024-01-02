@@ -21,7 +21,7 @@ const Link = ({ href, external, children, className = '', button }: LinkProps) =
   )
 
   const generatedClassName = useMemo(() => {
-    const staticClassName = 'transition-colors duration-200 ease-in-out inline-block'
+    const staticClassName = 'transition-colors duration-200 ease-in-out inline-block text-center'
 
     if (button) {
       return `${

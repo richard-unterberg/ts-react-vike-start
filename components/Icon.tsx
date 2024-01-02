@@ -1,27 +1,23 @@
 import { LucideProps } from 'lucide-react'
-import { lazy, Suspense, useEffect, useState } from 'react'
+import { useMemo } from 'react'
 
 import { ICON_ID } from '#lib/icons/iconID'
-import { LazyIconIconProps } from '#lib/icons/IconLazyRenderer'
+import APP_ICON from '#lib/icons/iconMap'
 
 interface AppIconProps extends LucideProps {
   icon: ICON_ID
 }
 
 const Icon = ({ icon, ...props }: AppIconProps) => {
-  const [Component, setComponent] = useState<React.ComponentType<LazyIconIconProps>>(() => '')
+  const AppIconComponent = useMemo(() => APP_ICON[icon].component ?? null, [icon])
 
-  useEffect(() => {
-    setComponent(() => lazy(() => import('#lib/icons/IconLazyRenderer')))
-  }, [])
-
-  if (icon) {
+  if (AppIconComponent) {
     return (
       <span
         className={`block ${props.className || ''}`}
         style={{ width: props.size, height: props.size }}
       >
-        <Suspense fallback="">{Component && <Component icon={icon} {...props} />}</Suspense>
+        <AppIconComponent {...props} />
       </span>
     )
   }

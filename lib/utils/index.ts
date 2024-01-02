@@ -9,7 +9,9 @@ export const getTitle = (pageContext: PageContextClient | PageContextServer) => 
     const fnc = val as PageContextUnionFnc
     return fnc(pageContext)
   }
-  return 'Some default title'
+  // DON'T FORGET TO SET A TITLE
+  // outputs the below if no title is given in +config.h.ts
+  return `DON'T FORGET TO SET A TITLE in +config.h.ts`
 }
 export const getDescription = (pageContext: PageContextClient | PageContextServer) => {
   const val = pageContext.config.description
@@ -18,5 +20,7 @@ export const getDescription = (pageContext: PageContextClient | PageContextServe
     const fnc = val as PageContextUnionFnc
     return fnc(pageContext)
   }
-  return 'Some default description'
+  // DON'T FORGET TO SET A DESCRIPTION
+  // outputs empty string if no desc is given in +config.h.ts
+  return ``
 }

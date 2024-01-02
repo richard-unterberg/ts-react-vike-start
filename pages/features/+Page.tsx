@@ -7,7 +7,7 @@ const Page = () => (
       Preconditions
     </h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-10">
-      <BoxElement>npm or yarn</BoxElement>
+      <BoxElement>npm, pnpm or yarn</BoxElement>
       <BoxElement>
         <LinkElement href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig">
           editorconfig
@@ -78,8 +78,9 @@ const Page = () => (
       <BoxElement>
         <span>🌊 </span>
         <LinkElement href="https://github.com/brillout/react-streaming">
-          React Streaming (Client / Server)
-        </LinkElement>
+          React 18 Streaming
+        </LinkElement>{' '}
+        enabled
       </BoxElement>
     </div>
   </>
