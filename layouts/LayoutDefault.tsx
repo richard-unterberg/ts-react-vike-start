@@ -21,7 +21,7 @@ const LayoutDefault = ({
       <div className="max-w-4xl m-auto text-light">
         <div className="relative container px-5 mx-auto text-white text-base">
           <Header />
-          <div>{children}</div>
+          <div className="page-portal">{children}</div>
           <Footer />
         </div>
       </div>

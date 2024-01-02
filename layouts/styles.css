@@ -5,3 +5,13 @@
 body {
     background-color: var(--tw-dark);
 }
+
+.page-portal {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.page-is-transitioning .page-portal {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
