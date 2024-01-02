@@ -1,5 +1,6 @@
 import path from 'path'
 import react from '@vitejs/plugin-react'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { visualizer } from 'rollup-plugin-visualizer'
 import vike from 'vike/plugin'
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -19,13 +20,11 @@ export default defineConfig({
       (visualizer({
         template: 'treemap',
         open: true,
-        gzipSize: true,
-        brotliSize: true,
         filename: 'bundle-analyze.html', // will be saved in project's root
       }) as PluginOption),
   ],
   optimizeDeps: {
-    include: ['react/jsx-runtime', 'vike-react/renderer/onRenderClient'],
+    include: ['react/jsx-runtime', './renderer/onRenderClient'],
   },
   server: {
     port: 5247,
