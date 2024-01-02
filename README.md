@@ -6,16 +6,22 @@ An SSR-ready vite-react starter with vike and my usual friends tailwind and luci
 Features:
 - vike (vite + ssr)
 - Tailwind CSS
+- SPA + SSR
 - Fontsource
 - Custom Tailwind Theme Hook
 - Lucide Icons
 - ES6 Path Aliases (#components, #renderer)
 - Github-pages workflow
+- React Streaming enabled
 - Full Dev Setup
   - ESLint
   - Prettier + Prettier Sort Imports
   - Husky + lint-staged
   - editorconfig
+
+Coming soon:
+- Client Side Fetching Example
+- Server Side Fetching Example
 
 ## Usage
 

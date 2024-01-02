@@ -38,8 +38,8 @@ const Header = () => {
       </div>
       <p className="mb-10">
         Just another SSR-ready vite-react starter template with some sugar from my usual friends
-        tailwind, lucide-icons and a strict linting setup 😙. React 18 Streaming enabled (Server /
-        Client Suspend)
+        tailwind, lucide-icons and a strict linting setup. React 18 Streaming enabled (Server /
+        Client) 🌊
       </p>
       <Nav />
     </div>
