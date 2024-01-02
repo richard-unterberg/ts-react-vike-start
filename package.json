@@ -1,6 +1,6 @@
 {
   "name": "ts-react-vike-start",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "type": "module",
   "scripts": {
@@ -37,17 +37,16 @@
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
     "husky": "^8.0.3",
-    "lint-staged": "^15.2.0"
+    "lint-staged": "^15.2.0",
+    "rollup-plugin-visualizer": "^5.12.0"
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.16",
     "@vitejs/plugin-react": "^4.2.1",
-    "cross-fetch": "^4.0.0",
     "lucide-react": "^0.303.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-streaming": "^0.3.18",
-    "rollup-plugin-visualizer": "^5.12.0",
     "styled-components": "^6.1.1",
     "tailwind-styled-components": "^2.2.0",
     "tailwindcss": "^3.4.0",
