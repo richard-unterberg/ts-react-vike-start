@@ -1,17 +1,19 @@
 import { renderToStream } from 'react-streaming/server'
 import { escapeInject } from 'vike/server'
-import type { InjectFilterEntry, OnRenderHtmlAsync } from 'vike/types'
+import type { InjectFilterEntry, OnRenderHtmlAsync, PageContextServer } from 'vike/types'
 
 import LayoutDefault from '#layouts/LayoutDefault'
 import logoUrl from '#root/assets/logo.svg'
 import { getDescription, getTitle } from '#utils/index'
 
+// userAgent seems not typed in vike, we extend the PageContextServer interface
+interface ExtendedPageContext extends PageContextServer {
+  userAgent: string
+}
+
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRenderHtmlAsync> => {
-  const { Page, pageProps } = pageContext
-  // todo: why is this untyped?
-  const { userAgent } = pageContext as never
-  // This onRenderHtml() hook only supports SSR, see https://vike.dev/render-modes for how to modify
-  // onRenderHtml() to support SPA
+  const { Page, pageProps, userAgent } = pageContext as ExtendedPageContext
+
   if (!Page) throw new Error('My render() hook expects pageContext.Page to be defined')
   const stream = await renderToStream(
     <LayoutDefault pageContext={pageContext}>
@@ -37,6 +39,7 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
       </body>
     </html>`
 
+  // controls what is injected into the html header on server side
   const injectFilter = (assets: InjectFilterEntry[]): void => {
     assets.forEach(asset => {
       if (
@@ -48,7 +51,7 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext): ReturnType<OnRender
         return
       }
 
-      // Don't preload fonts with woff extension
+      // no woff extension - only modern woff2 preloaded
       if (asset.assetType === 'font') {
         const src = asset.src.toString()
         if (src.endsWith('.woff')) {

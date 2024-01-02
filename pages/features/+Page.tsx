@@ -75,6 +75,12 @@ const Page = () => (
         <span>🚓 </span>
         <LinkElement href="https://github.com/microsoft/TypeScript">Typescript</LinkElement>
       </BoxElement>
+      <BoxElement>
+        <span>🌊 </span>
+        <LinkElement href="https://github.com/brillout/react-streaming">
+          React Streaming (Client / Server)
+        </LinkElement>
+      </BoxElement>
     </div>
   </>
 )
