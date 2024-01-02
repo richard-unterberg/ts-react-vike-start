@@ -98,7 +98,7 @@ Error generating stack: `+o.message+`
   text-grayLight
   bg-darkLight
   border-darkLightBorder
-`,Rp=[{label:"Get Started",href:"/"},{label:"Preconditions & Features",href:"/features"}],jp=()=>Y.jsxs(Mp,{className:"bg-opacity-25 p-8 mb-10 relative overflow-hidden justify-between md:flex items-center",children:[Y.jsx(Wl,{icon:Xe.Orbit,className:"text-darkLight absolute h-40 w-40 left-1/2 -ml-20 top-5"}),Y.jsxs("p",{className:" text-light relative mb-5 md:mb-0",children:["Test the client-side navigation ","=>"]}),Y.jsx("ul",{className:"flex gap-3 relative",children:Rp.map(u=>Y.jsx("li",{className:"block",children:Y.jsx(Ki,{className:"rounded",href:u.href,button:!0,children:u.label})},u.href))})]}),Op=Sc.div`
+`,Rp=[{label:"Get Started",href:"/"},{label:"Preconditions & Features",href:"/features/"}],jp=()=>Y.jsxs(Mp,{className:"bg-opacity-25 p-8 mb-10 relative overflow-hidden justify-between md:flex items-center",children:[Y.jsx(Wl,{icon:Xe.Orbit,className:"text-darkLight absolute h-40 w-40 left-1/2 -ml-20 top-5"}),Y.jsxs("p",{className:" text-light relative mb-5 md:mb-0",children:["Test the client-side navigation ","=>"]}),Y.jsx("ul",{className:"flex gap-3 relative",children:Rp.map(u=>Y.jsx("li",{className:"block",children:Y.jsx(Ki,{className:"rounded",href:u.href,button:!0,children:u.label})},u.href))})]}),Op=Sc.div`
   fixed
   md:absolute
   top-0
