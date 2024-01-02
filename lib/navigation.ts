@@ -5,6 +5,6 @@ export const mainNavigation = [
   },
   {
     label: 'Preconditions & Features',
-    href: '/features',
+    href: '/features/',
   },
 ]
