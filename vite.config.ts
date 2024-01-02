@@ -25,7 +25,7 @@ export default defineConfig({
       }) as PluginOption),
   ],
   optimizeDeps: {
-    include: ['cross-fetch', 'react/jsx-runtime', 'vike-react/renderer/onRenderClient'],
+    include: ['react/jsx-runtime', 'vike-react/renderer/onRenderClient'],
   },
   server: {
     port: 5247,
