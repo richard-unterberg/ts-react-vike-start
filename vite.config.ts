@@ -24,7 +24,7 @@ export default defineConfig({
       }) as PluginOption),
   ],
   optimizeDeps: {
-    include: ['react/jsx-runtime', './renderer/onRenderClient'],
+    include: ['react/jsx-runtime'],
   },
   server: {
     port: 5247,
