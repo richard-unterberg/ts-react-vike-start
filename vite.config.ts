@@ -1,9 +1,8 @@
 import path from 'path'
 import react from '@vitejs/plugin-react'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { visualizer } from 'rollup-plugin-visualizer'
+import UnoCSS from 'unocss/vite'
 import vike from 'vike/plugin'
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { defineConfig, PluginOption } from 'vite'
 
 import { AppConfig } from './lib/constants'
@@ -15,6 +14,7 @@ export default defineConfig({
   base: AppConfig.viteBaseUrl, // remove for using root
   plugins: [
     react(),
+    UnoCSS(),
     vike({ prerender: true, trailingSlash: true }),
     analyze &&
       (visualizer({

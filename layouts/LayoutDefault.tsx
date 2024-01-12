@@ -1,6 +1,8 @@
 import '@fontsource/inter/latin-400.css'
 import '@fontsource/inter/latin-700.css'
 import '#layouts/styles.css'
+import '@unocss/reset/tailwind.css'
+import 'virtual:uno.css'
 
 import { ReactNode, StrictMode } from 'react'
 import { PageContextClient, PageContextServer } from 'vike/types'
@@ -18,7 +20,7 @@ const LayoutDefault = ({
 }) => (
   <StrictMode>
     <PageContextProvider pageContext={pageContext}>
-      <div className="max-w-4xl m-auto text-light">
+      <div className="max-w-4xl m-auto text-light font-sans">
         <div className="relative container px-5 mx-auto text-white text-base">
           <Header />
           <div className="page-portal">{children}</div>

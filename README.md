@@ -1,11 +1,11 @@
 # TypeScript + React + Vike
-## feat. Tailwind CSS + ESLint + Prettier)
+## feat. Uno CSS + ESLint + Prettier)
 
 An SSR-ready vite-react starter with vike and my usual friends tailwind and lucide-icons 😙.
 
 Features:
 - vike (vite + ssr)
-- Tailwind CSS
+- Uno CSS
 - SPA + SSR
 - Fontsource
 - Custom Tailwind Theme Hook

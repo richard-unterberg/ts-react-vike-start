@@ -1,22 +1,20 @@
+import { theme } from '@unocss/preset-wind'
 import { useCallback, useMemo } from 'react'
-import tw from 'tailwindcss/defaultTheme'
 
-import twConfig from '#root/tailwind.config'
-
-const { theme: twTheme } = twConfig
+import unoConfig from '#root/uno.config'
 
 /** custom hook to retrieve data from the tailwind config from root */
 const useAppTheme = () => {
-  const theme = useMemo(() => twTheme, [])
+  const localTheme = useMemo(() => unoConfig.theme, [])
 
   const color = useCallback(
-    (key: string) => theme.colors[key as keyof typeof theme.colors],
-    [theme],
+    (key: string) => localTheme?.colors?.[key as keyof typeof localTheme.colors],
+    [localTheme],
   ) as (key: string) => string
 
   const spacing = useCallback((key: number) => {
-    const number = `${key}` as keyof typeof tw.spacing
-    return tw.spacing[number]
+    const number = `${key}` as keyof typeof theme.spacing
+    return theme?.spacing?.[number]
   }, [])
 
   return { spacing, color }
