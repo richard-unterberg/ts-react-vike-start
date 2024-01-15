@@ -21,17 +21,15 @@ const Page = () => (
         vs code extension
       </BoxElement>
       <BoxElement>
-        <LinkElement href="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss">
-          tailwindcss
-        </LinkElement>
+        <LinkElement href="https://unocss.dev/integrations/vscode">unocss</LinkElement>
         vs code extension
       </BoxElement>
     </div>
 
-    <h2 className="text-3xl mb-4" id="usage">
+    <h2 className="mb-4 text-3xl" id="usage">
       Features
     </h2>
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
+    <div className="grid grid-cols-2 mb-10 gap-3 md:grid-cols-3">
       <BoxElement>
         <span>👏 </span>
         <LinkElement href="https://github.com/facebook/react">React</LinkElement> +{' '}
@@ -39,7 +37,7 @@ const Page = () => (
       </BoxElement>
       <BoxElement>
         <span>🎨 </span>
-        <LinkElement href="https://github.com/tailwindlabs/tailwindcss">Tailwind CSS</LinkElement>
+        <LinkElement href="https://github.com/unocss/unocss">Uno CSS</LinkElement>
       </BoxElement>
       <BoxElement>
         ✍️ <LinkElement href="https://github.com/fontsource/fontsource">@fontsource</LinkElement>
