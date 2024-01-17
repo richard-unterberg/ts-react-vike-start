@@ -1,5 +1,5 @@
 # TypeScript + React + Vike
-## feat. Uno CSS + ESLint + Prettier)
+## feat. Uno CSS + ESLint + Prettier
 
 An SSR-ready vite-react starter with vike and my usual friends tailwind and lucide-icons 😙.
 
