@@ -24,14 +24,13 @@ const Header = () => (
           React + Vike + TS
         </h1>
         <h2 className="font-normal mb-6" id="feat-tailwind-css--eslint--prettier">
-          Tailwind CSS + ESLint + Prettier
+          Uno CSS + ESLint + Prettier
         </h2>
       </div>
     </div>
     <p className="mb-10">
-      Just another SSR-ready vite-react starter template with some sugar from my usual friends
-      tailwind, lucide-icons and a strict linting setup. React 18 Streaming enabled (Server /
-      Client) 🌊
+      Just another SSR-ready vite-react starter template with vike, unocss & strict development
+      setup. React 18 streaming enabled (Server / Client) 🌊
     </p>
     <Nav />
   </div>
