@@ -8,7 +8,6 @@ Features:
 - Uno CSS
 - SPA + SSR
 - Fontsource
-- Custom Tailwind Theme Hook
 - Lucide Icons
 - ES6 Path Aliases (#components, #renderer)
 - Github-pages workflow
