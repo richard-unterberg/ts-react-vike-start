@@ -1,3 +1,5 @@
+# OUTDATED CODE - using old vike v1 design - pls use: [vike-react](https://github.com/vikejs/vike-react)
+
 # TypeScript + React + Vike
 ## feat. Uno CSS + ESLint + Prettier
 
